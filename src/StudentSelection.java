@@ -8,6 +8,16 @@ public class StudentSelection {
         Scanner input = new Scanner(System.in);
         int numOfStudents = input.nextInt();
 
-        String[] student =
+        String[] student = new String[numOfStudents];
+        int[] age = new int[numOfStudents];
+
+        Scanner studentName = new Scanner(System.in);
+        Scanner studentAge = new Scanner(System.in);
+
+        for (int i= 0; i < numOfStudents; i++) {
+            System.out.println("enter Student's name: ");
+            student[i] = studentName.nextLine();
+            age[i] = studentAge.nextInt();
+        }
     }
 }
