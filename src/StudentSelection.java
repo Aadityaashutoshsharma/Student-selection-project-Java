@@ -12,12 +12,23 @@ public class StudentSelection {
         int[] age = new int[numOfStudents];
 
         Scanner studentName = new Scanner(System.in);
-        Scanner studentAge = new Scanner(System.in);
+        Scanner ageInput = new Scanner(System.in);
 
-        for (int i= 0; i < numOfStudents; i++) {
+        for (int i = 0; i < numOfStudents; i++) {
             System.out.println("enter Student's name: ");
             student[i] = studentName.nextLine();
-            age[i] = studentAge.nextInt();
+            age[i] = ageInput.nextInt();
         }
+
+        for (int i = 0; i < numOfStudents; i++) {
+            if (age[i] >= 15) {
+                System.out.println(student[i] + "can play Cricket.");
+                System.out.println("The student is now " + age[i]);
+            }
+        }
+
+        input.close();
+        studentName.close();
+        ageInput.close();
     }
 }
